@@ -62,11 +62,11 @@ const UploadForm = () => {
             />
             {/* Additional content or styles can be added */}
             <div className="items-center text-gray-950 p-4">
-              <div className="grid grid-cols-3 gap-4">
+              <div className="flex flex-wrap items-center">
                 {item.tags.map((tag, index) => (
                   <div
                     key={index}
-                    className="flex bg-slate-100  items-center rounded-sm border  p-2"
+                    className="flex bg-slate-100  items-center rounded-sm  p-2 m-2"
                   >
                     <p className="item-center ml-3  text-gray-600 font-helvetica-neue text-sm font-normal capitalize">
                       {tag}
