@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Search from "./components/Search";
+import SearchResult from "./components/SearchResult";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
+import UploadForm from "./components/UploadForm";
+import PhotoCard from "./components/PhotoCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/header" exact element={<Header />} />
+        <Route path="/search" exact element={<Search />} />
+        <Route path="/search" exact element={<UploadForm />} />
+        <Route path="/searchresult" exact element={<SearchResult />} />
+        {/* <Route path="/photocard" exact element={<PhotoCard />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
+
