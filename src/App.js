@@ -20,7 +20,7 @@ function App() {
         <Route path="/search" exact element={<Search />} />
         <Route path="/search" exact element={<UploadForm />} />
         <Route path="/searchresult" exact element={<SearchResult />} />
-        {/* <Route path="/photocard" exact element={<PhotoCard />} /> */}
+         <Route path="/photocard" exact element={<PhotoCard />} /> 
       </Routes>
     </Router>
   );
